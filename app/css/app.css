@@ -1,0 +1,50 @@
+body {
+  width: 75%;
+  margin: 0 auto;
+}
+
+img {
+  width: 100%;
+  height: 400px;
+}
+
+header {
+  height: 46px;
+}
+
+.nav-pills {
+  margin-top: 3px;
+}
+
+.btn-warning {
+  margin-top: 6px;
+}
+
+.btn-danger {
+  margin-right: 10px;
+}
+
+.pop-up {
+  position: fixed;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  background: rgba(0,0,0,0.7);
+  z-index: 9999;
+  padding: 30px 200px;
+}
+
+.addPostForm {
+  padding: 30px;
+  background: #fff;
+  
+}
+
+.ng-invalid.ng-dirty {
+  border-color: red;
+}
+
+.ng-valid.ng-dirty {
+  border-color: green;
+}

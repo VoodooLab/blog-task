@@ -1,0 +1,33 @@
+<div class="pop-up" ng-controller="NewPostController">
+	<div class="addPostForm">
+		<form name="addPostForm" ng-submit="addPost()" novalidate>
+
+			<h4>Add new post here</h4>
+
+			<fieldset class="form-group">
+				<input name="name" type="text" class="form-control" placeholder="Enter your name" title="Name" ng-model="post.author" 
+				ng-maxlength="30" required></input>
+				<p ng-show="addPostForm.name.$invalid && !addPostForm.name.$pristine" class="help-block">Your name is require</p>       
+			</fieldset>
+
+			<fieldset class="form-group">
+				<input name="title" class="form-control" type="text" placeholder="Title for your post" title="Tithe" ng-model="post.title" 
+				ng-minlength="5" ng-maxlength="20" required=></input>
+    			<p ng-show="addPostForm.title.$error.minlength" class="help-block">Title is too short.</p>
+    			<p ng-show="addPostForm.title.$error.maxlength" class="help-block">Title is too long.</p>
+			</fieldset>
+
+			<fieldset class="form-group">
+				<textarea name="text" type="text" class="form-control" placeholder="Tell your story" title="Text" ng-model="post.text" required>
+				</textarea>
+				<p ng-show="addPostForm.text.$invalid && !addPostForm.text.$pristine" class="help-block">Text is require</p>
+			</fieldset>
+
+			<fieldset class="form-group">
+				<input type="submit" class="btn btn-primary pull-right" value="Add Post" ng-disabled="addPostForm.$invalid"/>
+				<a href="/app/index.html#/main" class="btn btn-danger pull-right">Cancel</a>
+			</fieldset>
+
+		</form>
+	</div>
+</div>
